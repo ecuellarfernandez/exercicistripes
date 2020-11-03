@@ -1,0 +1,25 @@
+// Bucle
+@each $strip, $config in $config-strip{
+    $bg-color: nth($config, 1);
+    $translate: nth($config, 2);
+    
+    .stripes__strip:nth-child(#{$strip}){
+      transform:$translate;
+      background-color: $bg-color;
+      
+      // animation:{
+      //   name:strip#{$strip};
+      //   timing-function:$ani-timing;
+      //   delay:unquote("0.")#{$strip}s;
+      // }
+      animation-name: strip#{$strip};
+      animation-timing-function: $ani-timing;
+      animation-delay: unquote("0.")#{$strip}s;
+    }
+    
+    @keyframes strip#{$strip}{
+      from{transform:$translate;}
+      to{transform:translate(0);}
+    }
+    
+  } 

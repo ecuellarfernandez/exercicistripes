@@ -1,0 +1,9 @@
+// Variables
+$ani-timing:cubic-bezier(.27,.86,.34,1.01);
+$config-strip:(
+    '1': (#244F75, translate(-100%)),
+    '2': (#60BFBF, translateY(100%)),
+    '3':(#8C4B7E, translateY(-100%)),
+    '4': (#F8BB44, translateY(100%)),
+    '5':(#F24B4B, translate(100%)),
+);
